@@ -57,23 +57,7 @@ $(document).ready(function(){
 
     $('.optional-item').height(40);
 
-    // set text display for the main items
-    $('.main-tracker img').on('mouseenter', function() {
-        $('.main-tracker h2').text($(this).attr('id'));
-    });
-
-    $('.main-tracker img').on('mouseleave', function() {
-        $('.main-tracker h2').text("");
-    });
-
-    $('.horizontal-tracker img').on('mouseenter', function() {
-        $('.horizontal-tracker h2').text($(this).attr('id'));
-    });
-
-    $('.horizontal-tracker img').on('mouseleave', function() {
-        $('.horizontal-tracker h2').text("");
-    });
-
+    // handle incrementing fusion counts
     $("img[data-chapter-key]").on("mousedown", function(e) {
         var c = parseInt($(this).attr("data-chapter-key"));
         e.preventDefault();
@@ -107,6 +91,10 @@ $(document).ready(function(){
         count = count + 1;
         if (count > total) count = total;
         $(this).text(`${count}/${total}`);
+
+        if (count === total) {
+            $(this).toggleClass("completed", true);
+        }
     });
 
     $('p.counter').contextmenu(function() {
@@ -116,6 +104,8 @@ $(document).ready(function(){
         count = count - 1;
         if (count < 0) count = 0;
         $(this).text(`${count}/${total}`);
+
+        $(this).toggleClass("completed", false);
     });
 
     // options menu
