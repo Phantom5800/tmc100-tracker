@@ -1,0 +1,197 @@
+<html>
+    <head>
+        <title>TMC 100% Tracker</title>
+        <meta name="description" content="Tracker for Paper Mario 100% Speedruns">
+        <meta name="keywords" contents="Paper Mario, 100%, Tracker, N64">
+        <meta name="author" content="Phantom Games LLC.">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="scripts/main.js?version=2"></script>
+        <link rel="stylesheet" href="styles/main.css?version=2">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LW6YPGQDM5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LW6YPGQDM5');
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="options-menu-toggle" class="hamburger">
+                <div class="hamburger-1"></div>
+                <div class="hamburger-2"></div>
+                <div class="hamburger-3"></div>
+            </div>
+        </header>
+        <div class="flex-row">
+            <!--
+                Main tracker for chapter progress
+            -->
+            <div class="main-tracker section">
+                <table width="100%">
+                    <tr style="height: 4em;">
+                        <td style="text-align: left; width: 60%;">
+                            <h1>100% Progress</h1>
+                        </td>
+                        <td style="text-align: right;">
+                            <h2></h2>
+                        </td>
+                    </tr>
+                </table>
+                <table id="hundo-tracker">
+                    <tr>
+                        <td>
+                            <p>Total</p>
+                        </td>
+                        <td>
+                            <p>Fused</p>
+                        </td>
+                        <td>
+                            <p>Shared</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img data-chapter-key="1" id="G[" class="optional-item" src="images/G[.png">
+                            <p class="chapter-1-key-count">0</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/11</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/5</p>
+                        </td>
+                    </tr>
+                    <tr>                        
+                        <td>
+                            <img data-chapter-key="2" id="GP" class="optional-item" src="images/GP.png">
+                            <p class="chapter-2-key-count">0</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/11</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/5</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img data-chapter-key="3" id="G<" class="optional-item" src="images/GV.png">
+                            <p class="chapter-3-key-count">0</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/11</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/6</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img data-chapter-key="4" id="BL" class="optional-item" src="images/BL.png">
+                            <p class="chapter-4-key-count">0</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/9</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img data-chapter-key="5" id="B6" class="optional-item" src="images/B6.png">
+                            <p class="chapter-5-key-count">0</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/8</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/1</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img data-chapter-key="6" id="R>" class="optional-item" src="images/RV.png">
+                            <p class="chapter-6-key-count">0</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/6</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/1</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img data-chapter-key="7" id="RE" class="optional-item" src="images/RE.png">
+                            <p class="chapter-7-key-count">0</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/8</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img data-chapter-key="8" id="R3" class="optional-item" src="images/R3.png">
+                            <p class="chapter-8-key-count">0</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/9</p>
+                        </td>
+                        <td>
+                            <p class="counter">0/0</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="flex-column">
+                <div class="info-block">
+                    <ul>
+                        <li>
+                            Left click increments counts
+                        </li>
+                        <li>
+                            Right click decrements counts
+                        </li>
+                        <li>
+                            Middle click increments by 10 on the kinstone totals
+                        </li>
+                        <li>For suggestions and feature requests, please make issues on Github (link in the footer)!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="options-menu">
+            <table width="100%">
+                <tr>
+                    <td class="option-name">Background Color</td>
+                    <td class="option">
+                        <div>
+                            <input type="color" id="background-color" value="#a35700">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="option-name">Section Color</td>
+                    <td class="option">
+                        <div>
+                            <input type="color" id="section-color" value="#7b4103">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <footer style="padding-top: 1em; text-align: center;">
+            <script type="text/javascript" src="https://resources.phantom-games.com/copywriteNotice.js"></script>
+        </footer>
+</body>
+</html>
