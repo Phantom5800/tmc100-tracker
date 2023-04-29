@@ -19,11 +19,23 @@ div.flex-column {
 }
 
 table, tr, td, th {
-    border: none;
+    border-width: 1;
+    border-style: solid;
+    border-color: white;
 
     font-size: inherit;
     font-weight: inherit;
-    color: inherit;
+    color: white;
+}
+
+div#options-menu>table,
+div#options-menu>table>tbody>tr,
+div#options-menu>table>tbody>tr>td {
+    border: none;
+}
+
+table.kinstone-table>tbody>tr>td {
+    padding-top: 1em;
 }
 
 #hundo-tracker td {
@@ -36,6 +48,10 @@ td {
     min-width: 66px;
     min-height: 66px;
     vertical-align: middle;
+}
+
+td>ol, td>ul {
+    text-align: left;
 }
 
 th {
@@ -64,7 +80,6 @@ p.completed {
 .section {
     background-color: rgba(0,0,0,0.25);
     margin: 5px 5px 5px 5px;
-    border-radius: 10px;
 }
 
 .info-block {
