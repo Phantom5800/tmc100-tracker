@@ -18,6 +18,15 @@ div.flex-column {
     flex-direction: column;
 }
 
+p {
+    margin: 0 0 0 0;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: white;
+
+    -webkit-text-stroke: 1px black;
+}
+
 table, tr, td, th {
     border-width: 1;
     border-style: solid;
@@ -28,6 +37,10 @@ table, tr, td, th {
     color: white;
 }
 
+table {
+    max-width: 30em;
+}
+
 div#options-menu>table,
 div#options-menu>table>tbody>tr,
 div#options-menu>table>tbody>tr>td {
@@ -36,6 +49,13 @@ div#options-menu>table>tbody>tr>td {
 
 table.kinstone-table>tbody>tr>td {
     padding-top: 1em;
+}
+
+table.kinstone-table>tbody>tr>td>p {
+    padding-top: 1em;
+    font-size: 1em;
+    -webkit-text-stroke: initial;
+    font-weight: lighter;
 }
 
 #hundo-tracker td {
@@ -58,15 +78,6 @@ th {
     font-size: 1.25em;
     padding-right: 1em;
     padding-left: 1em;
-}
-
-p {
-    margin: 0 0 0 0;
-    font-size: 1.5em;
-    font-weight: bolder;
-    color: white;
-
-    -webkit-text-stroke: 1px black;
 }
 
 p.counter:hover {
